@@ -14,10 +14,10 @@ import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.plaf.FontUIResource;
 
 public class BaseFrame extends JFrame {
 
+	
 	public BaseFrame(String title, int width, int height) {
 		setTitle(title);
 		setSize(width, height);
@@ -61,6 +61,7 @@ public class BaseFrame extends JFrame {
 //		return d;
 //		
 //	}
+	
 	protected ImageIcon getImg(String path) {
 		return new ImageIcon(Toolkit.getDefaultToolkit().getImage(path));
 	}
