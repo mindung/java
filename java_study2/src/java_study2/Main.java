@@ -7,10 +7,10 @@ public class Main {
 		System.out.println(11);
 		
 		
-		// ¶÷´Ù °øºÎ!
+		// í•œê¸€.. ê¹¨ì§‘ë‹ˆê¹Œ?
 		new Thread(() -> System.out.println(111));
 		
-		// java ¾î¤Ç·Á¿ö¿ä
+		// java í•œê¸€ ê¹¨ì ¸?
 	}
 
 }
