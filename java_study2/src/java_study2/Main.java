@@ -9,6 +9,8 @@ public class Main {
 		
 		// 람다 공부!
 		new Thread(() -> System.out.println(111));
+		
+		// java 어ㅗ려워요
 	}
 
 }
