@@ -76,7 +76,7 @@ public class BaseFrame extends JFrame {
 	}
 	
 	protected <T extends JComponent> T addC(T com, int w, int h) {
-		com.setPreferredSize(new Dimension(h, h));
+		com.setPreferredSize(new Dimension(w, h));
 		return com;
 	}
 	
