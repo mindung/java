@@ -18,7 +18,8 @@ public class Test {
 		System.out.println(i++);
 		System.out.println(i++);
 		System.out.println(i++);
-		System.out.println(i);
+		System.out.println(i++);
 		// 출력 값 : 0, 1, 2
+		
 	}
 }
