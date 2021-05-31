@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 public class Stream {
 
 	public static void main(String[] args) {
+		
 //		Stream문은 데이터의 흐름. 배열 or 컬렉션 인스턴스에 함수 여러 개를 조합해서 원하는 결과를 필터링하고 가공된 결과를 얻을 수 있다.
 //		Java 8버전부터 
 //		람다 이용할 수 있는 기술 중 하나
@@ -29,7 +30,6 @@ public class Stream {
 				}
 				
 //				----------------------------------------------
-
 				System.out.println("Stream문");
 				
 				// Stream 으로 푸는 법
@@ -69,7 +69,6 @@ public class Stream {
 //				getAsInt, getAsDouble 등등 수식을 적어줘야 하는 것 들도 있다.
 				
 // ------------------------------------------------------------------------
-				
 				// 정규식
 				String test = " ";
 				// ^시작
