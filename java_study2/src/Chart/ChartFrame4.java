@@ -1,4 +1,4 @@
-package frame;
+package Chart;
 
 import java.awt.Color;
 import java.awt.Dimension;

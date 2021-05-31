@@ -1,4 +1,4 @@
-package frame;
+package Chart;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

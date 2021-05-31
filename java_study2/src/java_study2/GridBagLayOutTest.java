@@ -7,7 +7,7 @@ import java.util.Iterator;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-import frame.BaseFrame;
+import Chart.BaseFrame;
 
 public class GridBagLayOutTest extends BaseFrame{
 
@@ -31,7 +31,7 @@ public class GridBagLayOutTest extends BaseFrame{
 //		gbc.fill = GridBagConstraints.HORIZONTAL ;
 		
 		for (int i = 0; i < strBtn.length; i++) {
-			gbc.gridx = i+ 1 ; // 해당 컴포넌트가 어디에 위치할 지 x축 좌표
+			gbc.gridx = i + 1 ; // 해당 컴포넌트가 어디에 위치할 지 x축 좌표
 			gbc.gridy = i ;   // 
 
 			panel.add(btn[i] = new JButton(strBtn[i]), gbc);
