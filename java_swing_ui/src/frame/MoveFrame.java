@@ -15,6 +15,7 @@ public class MoveFrame extends BaseFrame{
 					Thread.sleep(10);
 					
 					Random random = new Random();
+					System.out.println(random.nextInt()% 5);
 					int x = getX() + random.nextInt() % 5; // 새위치x // rdIdx(); // 
 					int y = getY() + random.nextInt() % 5; // + random.nextInt() % 5; // 새위치y rdIdx();
 					setLocation(x, y); // 프레임의 위치 이동

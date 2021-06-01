@@ -2,6 +2,8 @@ package frame;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.Iterator;
 
@@ -23,9 +25,19 @@ public class Login extends BaseFrame{
 		add(btn, BorderLayout.SOUTH);
 		
 		var strTf = "아이디,비밀번호".split(",");
+		ActionListener[] actionArray = {
+			e -> login(),
+			e -> dispose(),
+			e -> {
+				this.setTitle("asd");
+			}
+		};
+		
+		
 		for (int i = 0; i < strTf.length; i++) {
 			panel.add(new JLabel(strTf[i]));
 			panel.add(tf[i]);
+			// createButton("로그인", actionArray[i]);
 		}
 		// stream(Arrays), split(",")
 	}
