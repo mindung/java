@@ -8,6 +8,12 @@ import java.awt.Toolkit;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Iterator;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -18,6 +24,22 @@ import javax.swing.JOptionPane;
 
 public class BaseFrame extends JFrame{
 
+	static Connection con;
+	static {
+		try {
+			con = DriverManager.getConnection("jdbc:mysql://localhost/testLogin?serverTimezone=UTC","root", "1234");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public ResultSet getRs(String sql, Object...objects) throws SQLException {
+		PreparedStatement ps = con.prepareStatement(sql);
+		for (int i = 0; i < objects.length; i++) {
+			ps.setObject(i + 1, objects[i]);
+		}
+		return ps.executeQuery();
+	}
 	
 	public BaseFrame(String title, int width, int height) {
 		setTitle(title);
