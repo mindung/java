@@ -44,13 +44,10 @@ public class MainFrame extends JFrame {
 	private void clickBtn1(String text) {
 		this.tf1.setText(text);
 	}
-	
 	private void clickBtn2(String text) {
 		this.tf2.setText(text);
 	}
-	
 	public static void main(String[] args) {
 		new MainFrame().setVisible(true);
 	}
-	
 }

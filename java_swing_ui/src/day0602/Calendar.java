@@ -34,7 +34,6 @@ private String[] Days = {"일","월","화","수","목","금","토","일"};
 		var pnlNorth = new JPanel();
 		var pnlWeekDay = new JPanel(new GridLayout(1, 7));
 		var pnlCalendar = new JPanel(new BorderLayout());
-		
 		var btnPrev = new JButton("◀");
 		var btnNext = new JButton("▶");
 		
@@ -58,7 +57,6 @@ private String[] Days = {"일","월","화","수","목","금","토","일"};
 			lb.setForeground(i == 0 ? Color.red : (i == 6 ? Color.BLUE : Color.BLACK));
 			pnlWeekDay.add(lb);
 		}
-		
 		getDays();
 	}
 	
@@ -80,7 +78,7 @@ private String[] Days = {"일","월","화","수","목","금","토","일"};
 	private void getDays() {
 		pnlDays.removeAll();		
 	
-		lbDate.setText(date.format(DateTimeFormatter.ofPattern("yyyy년 MM 월")));
+		lbDate.setText(date.format(DateTimeFormatter.ofPattern("yyyy년 MM월")));
 		LocalDate firstDay = LocalDate.of(date.getYear(), date.getMonth(), 1);
 		
 		for (int i = 0; i < firstDay.getDayOfWeek().getValue(); i++) {
@@ -108,7 +106,6 @@ private String[] Days = {"일","월","화","수","목","금","토","일"};
 		}
 		
 		btn.addActionListener(e -> {
-//			String day = Days[date.getDayOfWeek().getValue()]; // 해당 주의 요일
 			text.textSend(date.toString());
 			dispose();
 		});
