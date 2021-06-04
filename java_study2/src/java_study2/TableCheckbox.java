@@ -8,10 +8,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class TableCheckbox extends JFrame {
 
-    private static final long serialVersionUID = 1L;
     private JTable table;
-
-    
     public TableCheckbox() {
         Object[] columnNames = {"Type", "Company", "Shares", "Price", "Boolean"};
         Object[][] data = {
