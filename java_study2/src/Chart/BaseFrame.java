@@ -55,6 +55,7 @@ public class BaseFrame extends JFrame {
 		return button;
 	}
 	
+//	ㄹㄹㄹㄹㄹ 글씨 깨지나요?
 //	public Object setData(Object o) {
 //		var s = "dd,d".split(",");
 //		var d = v

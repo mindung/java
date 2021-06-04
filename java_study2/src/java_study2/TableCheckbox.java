@@ -27,16 +27,10 @@ public class TableCheckbox extends JFrame {
             @Override
             public Class getColumnClass(int column) {
                 switch (column) {
-                    case 0:
-                        return String.class;
-                    case 1:
-                        return String.class;
-                    case 2:
-                        return Integer.class;
-                    case 3:
-                        return Double.class;
-                    default:
-                        return Boolean.class;
+                case 4:
+                	return Boolean.class;
+                default:
+                    return String.class;
                 }
             }
         };
