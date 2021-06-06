@@ -9,16 +9,16 @@ import javax.swing.table.DefaultTableModel;
 public class TableCheckbox extends JFrame {
 
     private JTable table;
+    private Object[] columnNames = {"Type", "Company", "Shares", "Price", "Boolean"};
+    private Object[][] data = {
+    		{"Buy", "IBM", new Integer(1000), new Double(80.50), false},
+    		{"Sell", "MicroSoft", new Integer(2000), new Double(6.25), true},
+    		{"Sell", "Apple", new Integer(3000), new Double(7.35), true},
+    		{"Buy", "Nortel", new Integer(4000), new Double(20.00), false}
+    };
+    
+    private DefaultTableModel model = new DefaultTableModel(data, columnNames);
     public TableCheckbox() {
-        Object[] columnNames = {"Type", "Company", "Shares", "Price", "Boolean"};
-        Object[][] data = {
-            {"Buy", "IBM", new Integer(1000), new Double(80.50), false},
-            {"Sell", "MicroSoft", new Integer(2000), new Double(6.25), true},
-            {"Sell", "Apple", new Integer(3000), new Double(7.35), true},
-            {"Buy", "Nortel", new Integer(4000), new Double(20.00), false}
-        };
-        DefaultTableModel model = new DefaultTableModel(data, columnNames);
-        
         table = new JTable(model) {
 
             @Override
@@ -31,22 +31,18 @@ public class TableCheckbox extends JFrame {
                 }
             }
         };
+        
+        // size! auto select  
         table.setPreferredScrollableViewportSize(table.getPreferredSize());
         JScrollPane scrollPane = new JScrollPane(table);
-        getContentPane().add(scrollPane);
+        add(scrollPane);
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-
-            @Override
-            public void run() {
-            	TableCheckbox frame = new TableCheckbox();
-                frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
-                frame.pack();
-                frame.setLocation(150, 150);
-                frame.setVisible(true);
-            }
-        });
+    	TableCheckbox frame = new TableCheckbox();
+        frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
     }
 }
