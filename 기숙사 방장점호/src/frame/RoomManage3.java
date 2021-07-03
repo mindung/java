@@ -42,8 +42,6 @@ public class RoomManage3 extends BaseFrame{
 				btn.setEnabled(false);
 			}
 		}
-
-		
 	}
 	public static void main(String[] args) {
 		new RoomManage3().setVisible(true);
