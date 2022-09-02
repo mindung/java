@@ -12,6 +12,7 @@ public class SqlStudy {
 //		Connection con = DriverManager.getConnection("jdbc:mysql://localhost/?serverTimezone=UTC", "root", "1234");
 		Statement stmt = con.createStatement();
 		
+		
 		stmt.execute("drop database if exists test");
 		stmt.execute("create database test");
 		stmt.execute("use test");
